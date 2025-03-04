@@ -148,5 +148,56 @@
         "key": "LINEAR_API_KEY"
       }
     ]
+  },
+  {
+    "name": "Slack",
+    "description": "Allows Claude to interact with Slack",  
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/slack.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/slack.svg"
+      }
+    },
+    "category": "Communication",
+    "price": "Free",
+    "developer": "Slack",
+    "config": {
+      "mcpKey": "slack",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ]
+    },
+    "features": [
+      {
+        "name": "Ask Claude about your Slack issues",
+        "description": "Ask Claude about your Slack issues",
+        "prompt": "What are the most important issues in my customer Slack channels?"
+      },
+      {
+        "name": "Get a tldr of a Slack conversation",
+        "description": "Get a tldr of a Slack conversation",
+        "prompt": "Give me a tldr of this thread in Slack..."
+      }
+    ],
+    "setup": [
+      {
+        "label": "Slack Bot Token",
+        "type": "input",
+        "placeholder": "Enter your Slack bot token",
+        "value": "Enter your Slack bot token",
+        "key": "SLACK_BOT_TOKEN"
+      },
+      {
+        "label": "Slack Team ID",
+        "type": "input",
+        "placeholder": "Enter your Slack team ID",
+        "value": "Enter your Slack team ID",
+        "key": "SLACK_TEAM_ID"
+      }
+    ]
   }
 ]

@@ -13,6 +13,15 @@
     "price": "Free",
     "developer": "Google LLC",
     "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "config": {
+      "mcpKey": "puppeteer",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer",
+        "--debug"
+      ]
+    },
     "features": [
       {
         "name": "Navigate to any website",
@@ -41,6 +50,15 @@
     "category": "Utilities",
     "price": "Free",
     "developer": "Model Context Protocol",
+    "config": {
+      "mcpKey": "time",
+      "runtime": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/modelcontextprotocol/servers.git#subdirectory=src/time",
+        "mcp-server-time"
+      ]
+    },
     "features": [
       {
         "name": "Get the current time",
@@ -64,6 +82,15 @@
     "category": "Social",
     "price": "Free",
     "developer": "Y Combinator",
+    "config": {
+      "mcpKey": "hn",
+      "runtime": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/erithwik/mcp-hn",
+        "mcp-hn"
+      ]
+    },
     "features": [
       {
         "name": "Get the top stories on Hacker News",
@@ -92,6 +119,14 @@
     "category": "Productivity",
     "price": "Get",
     "developer": "Linear",
+    "config": {
+      "mcpKey": "linear",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "linear-mcp-server"
+      ]
+    },
     "features": [
       {
         "name": "Ask Claude about your Linear issues",

@@ -199,5 +199,44 @@
         "key": "SLACK_TEAM_ID"
       }
     ]
+  },
+  {
+    "name": "Rember",
+    "description": "Rember MCP allows Claude to create flashcards to help you remember anything you can about.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/rember.png",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/rember.png"
+      }
+    },
+    "category": "Education",
+    "price": "Free",
+    "developer": "Rember",
+    "sourceUrl": "https://github.com/rember/rember-mcp",
+    "config": {
+      "mcpKey": "rember",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@getrember/mcp"
+      ]
+    },
+    "features": [
+      {
+        "name": "Create flashcards",
+        "description": "Create flashcards in Rember",
+        "prompt": "Add to Rember..."
+      }
+    ],
+    "setup": [
+      {
+        "label": "Rember API Key",
+        "type": "input",
+        "placeholder": "Enter your Rember API key, you can find it in the Settings",
+        "value": "Enter your Rember API key, you can find it in the Settings",
+        "key": "REMBER_API_KEY"
+      }
+    ]
   }
 ]

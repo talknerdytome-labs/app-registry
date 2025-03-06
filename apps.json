@@ -117,7 +117,7 @@
       }
     },
     "category": "Productivity",
-    "price": "Get",
+    "price": "Free",
     "developer": "Linear",
     "config": {
       "mcpKey": "linear",
@@ -197,6 +197,49 @@
         "placeholder": "Enter your Slack team ID",
         "value": "Enter your Slack team ID",
         "key": "SLACK_TEAM_ID"
+      }
+    ]
+  },
+  {
+    "name": "Obsidian",
+    "description": "Allows Claude to interact with your Obsidian vault, search notes, and retrieve content",
+    "sourceUrl": "https://github.com/MarkusPfundstein/mcp-obsidian",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/obsidian.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/obsidian.svg"
+      }
+    },
+    "category": "Productivity",
+    "price": "Free",
+    "developer": "Markus Pfundstein",
+    "config": {
+      "mcpKey": "obsidian",
+      "runtime": "uvx",
+      "args": [
+        "mcp-obsidian"
+      ]
+    },
+    "features": [
+      {
+        "name": "Search Obsidian notes",
+        "description": "Search for notes in your Obsidian vault",
+        "prompt": "Find notes in my Obsidian vault about..."
+      },
+      {
+        "name": "Retrieve note content",
+        "description": "Get the content of specific notes from your Obsidian vault",
+        "prompt": "Show me my Obsidian note about..."
+      }
+    ],
+    "setup": [
+      {
+        "label": "Obsidian API Key",
+        "type": "input",
+        "placeholder": "Enter your Obsidian API key",
+        "value": "Enter your Obsidian API key",
+        "key": "OBSIDIAN_API_KEY"
       }
     ]
   },

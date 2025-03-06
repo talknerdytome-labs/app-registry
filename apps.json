@@ -76,7 +76,7 @@
   {
     "name": "Linear",
     "description": "Allows Claude to interact with Linear",
-    "sourceUrl": "https://github.com/jerhadf/linear-mcp-server",
+    "sourceUrl": "https://github.com/vinayak-mehta/linear-mcp",
     "icon": {
       "type": "url",
       "url": {
@@ -89,10 +89,11 @@
     "developer": "Linear",
     "config": {
       "mcpKey": "linear",
-      "runtime": "npx",
+      "runtime": "uvx",
       "args": [
-        "-y",
-        "linear-mcp-server"
+        "--from",
+        "git+https://github.com/vinayak-mehta/linear-mcp",
+        "linear-mcp"
       ]
     },
     "features": [
@@ -124,7 +125,7 @@
   },
   {
     "name": "Slack",
-    "description": "Allows Claude to interact with Slack",  
+    "description": "Allows Claude to interact with Slack",
     "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
     "icon": {
       "type": "url",

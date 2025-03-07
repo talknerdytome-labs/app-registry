@@ -35,41 +35,126 @@
     "setup": []
   },
   {
-    "name": "Hacker News",
-    "description": "Hacker News MCP which allows Claude to get the top stories on Hacker News and summarize discussion threads.",
-    "sourceUrl": "https://github.com/erithwik/mcp-hn",
+    "name": "Memory",
+    "description": "This app lets Claude remember information about the user across chats.",
     "icon": {
       "type": "url",
       "url": {
-        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/yc.svg",
-        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/yc.svg"
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/memory-light.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/memory-dark.svg"
       }
     },
-    "category": "Social",
+    "category": "Utilities",
     "price": "Free",
-    "developer": "Y Combinator",
+    "developer": "MCP",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
     "config": {
-      "mcpKey": "hn",
-      "runtime": "uvx",
+      "mcpKey": "memory",
+      "runtime": "npx",
       "args": [
-        "--from",
-        "git+https://github.com/erithwik/mcp-hn",
-        "mcp-hn"
+        "-y",
+        "@modelcontextprotocol/server-memory"
       ]
     },
     "features": [
       {
-        "name": "Get the top stories on Hacker News",
-        "description": "Get the top stories on Hacker News",
-        "prompt": "What are the top stories on Hacker News?"
+        "name": "Remember user information",
+        "description": "Store and recall information about the user across conversations",
+        "prompt": "Remember that John likes to play soccer"
       },
       {
-        "name": "Summarize discussion threads on Hacker News",
-        "description": "Summarize discussion threads on Hacker News",
-        "prompt": "Summarize the discussion thread on Hacker News titled..."
+        "name": "Recall previous conversations",
+        "description": "Access information from past interactions with the user",
+        "prompt": "What did John tell me about his job last time we talked?"
       }
     ],
     "setup": []
+  },
+  {
+    "name": "Filesystem",
+    "description": "This app lets Claude read, write, update, and delete files on your computer.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/filesystem-light.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/filesystem-dark.svg"
+      }
+    },
+    "category": "Utilities",
+    "price": "Free",
+    "developer": "MCP",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+    "config": {
+      "mcpKey": "filesystem",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "~/"
+      ]
+    },
+    "features": [
+      {
+        "name": "Read and write files",
+        "description": "Access and modify files on your computer",
+        "prompt": "Read the contents of my project's README.md file"
+      },
+      {
+        "name": "Manage directories",
+        "description": "List, create, and navigate through directories",
+        "prompt": "Show me all the files in my Documents folder"
+      }
+    ],
+    "setup": []
+  },
+  {
+    "name": "Github",
+    "description": "This app lets Claude use the GitHub API, enabling file operations, repository management, search functionality, and more.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/github-light.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/github-dark.svg"
+      }
+    },
+    "category": "Utilities",
+    "price": "Free",
+    "developer": "MCP",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+    "config": {
+      "mcpKey": "filesystem",
+      "runtime": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ]
+    },
+    "features": [
+      {
+        "name": "Read and write files",
+        "description": "Access and modify files on your computer",
+        "prompt": "Read the contents of my project's README.md file"
+      },
+      {
+        "name": "Manage directories",
+        "description": "List, create, and navigate through directories",
+        "prompt": "Show me all the files in my Documents folder"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Create a GitHub Personal Access Token",
+        "value": "Create a personal access token for your account: [https://github.com/settings/tokens](https://github.com/settings/tokens)",
+        "type": "text"
+      },
+      {
+        "label": "GitHub Personal Access Token",
+        "type": "input",
+        "placeholder": "Enter your GitHub Personal Access Token",
+        "value": "Enter your GitHub Personal Access Token",
+        "key": "GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    ]
   },
   {
     "name": "Linear",
@@ -302,6 +387,43 @@
         "name": "Interact with any website - search, click, scroll, screenshot, etc.",
         "description": "Click elements on the page",
         "prompt": "Go to google.com and search for..."
+      }
+    ],
+    "setup": []
+  },
+  {
+    "name": "Hacker News",
+    "description": "Hacker News MCP which allows Claude to get the top stories on Hacker News and summarize discussion threads.",
+    "sourceUrl": "https://github.com/erithwik/mcp-hn",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/yc.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/yc.svg"
+      }
+    },
+    "category": "Social",
+    "price": "Free",
+    "developer": "Y Combinator",
+    "config": {
+      "mcpKey": "hn",
+      "runtime": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/erithwik/mcp-hn",
+        "mcp-hn"
+      ]
+    },
+    "features": [
+      {
+        "name": "Get the top stories on Hacker News",
+        "description": "Get the top stories on Hacker News",
+        "prompt": "What are the top stories on Hacker News?"
+      },
+      {
+        "name": "Summarize discussion threads on Hacker News",
+        "description": "Summarize discussion threads on Hacker News",
+        "prompt": "Summarize the discussion thread on Hacker News titled..."
       }
     ],
     "setup": []

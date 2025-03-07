@@ -71,43 +71,6 @@
     "setup": []
   },
   {
-    "name": "Filesystem",
-    "description": "This app lets Claude read, write, update, and delete files on your computer.",
-    "icon": {
-      "type": "url",
-      "url": {
-        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/filesystem-light.svg",
-        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/filesystem-dark.svg"
-      }
-    },
-    "category": "Utilities",
-    "price": "Free",
-    "developer": "MCP",
-    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
-    "config": {
-      "mcpKey": "filesystem",
-      "runtime": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "~/"
-      ]
-    },
-    "features": [
-      {
-        "name": "Read and write files",
-        "description": "Access and modify files on your computer",
-        "prompt": "Read the contents of my project's README.md file"
-      },
-      {
-        "name": "Manage directories",
-        "description": "List, create, and navigate through directories",
-        "prompt": "Show me all the files in my Documents folder"
-      }
-    ],
-    "setup": []
-  },
-  {
     "name": "Github",
     "description": "This app lets Claude use the GitHub API, enabling file operations, repository management, search functionality, and more.",
     "icon": {

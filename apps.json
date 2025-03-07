@@ -94,14 +94,14 @@
     },
     "features": [
       {
-        "name": "Read and write files",
-        "description": "Access and modify files on your computer",
-        "prompt": "Read the contents of my project's README.md file"
+        "name": "Create or update files",
+        "description": "Create or update a file in a GitHub repository",
+        "prompt": "Create a README file for my project and push it to my repository at github.com/username/repo"
       },
       {
-        "name": "Manage directories",
-        "description": "List, create, and navigate through directories",
-        "prompt": "Show me all the files in my Documents folder"
+        "name": "Summarize open issues",
+        "description": "Fetch and summarize all open issues in a GitHub repository",
+        "prompt": "Summarize all open issues in my repository at github.com/username/repo"
       }
     ],
     "setup": [

@@ -496,7 +496,7 @@
     "developer": "MCP",
     "sourceUrl": "https://github.com/vinayak-mehta/mcp-browser-use",
     "config": {
-      "mcpKey": "browser-mcp",
+      "mcpKey": "browser-use",
       "runtime": "uvx",
       "args": [
         "mcp-browser-use"

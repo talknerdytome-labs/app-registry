@@ -137,9 +137,7 @@
       "mcpKey": "linear",
       "runtime": "uvx",
       "args": [
-        "--from",
-        "git+https://github.com/vinayak-mehta/linear-mcp",
-        "linear-mcp"
+        "mcp-linear"
       ]
     },
     "features": [

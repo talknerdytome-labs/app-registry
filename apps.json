@@ -513,8 +513,8 @@
     "icon": {
       "type": "url",
       "url": {
-        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/google-ads-light.svg",
-        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/google-ads-dark.svg"
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/google-ads-light.png",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/google-ads-dark.png"
       }
     },
     "category": "Marketing",

@@ -506,5 +506,79 @@
       }
     ],
     "setup": []
+  },
+  {
+    "name": "Google Ads Library",
+    "description": "Search Google's public ads database and analyze ad images/videos using AI, with intelligent caching for performance.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/google-ads-light.svg",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/google-ads-dark.svg"
+      }
+    },
+    "category": "Marketing",
+    "price": "Free",
+    "developer": "TalkNerdyToMe Labs",
+    "sourceUrl": "https://github.com/talknerdytome-labs/google-ads-library-mcp",
+    "config": {
+      "mcpKey": "google-ads-library",
+      "runtime": "python",
+      "args": [
+        "mcp_server.py",
+        "--scrapecreators-api-key",
+        "${SCRAPECREATORS_API_KEY}",
+        "--gemini-api-key",
+        "${GEMINI_API_KEY}"
+      ]
+    },
+    "features": [
+      {
+        "name": "Search Google ads by company",
+        "description": "Find all currently running ads from specific companies using their domain",
+        "prompt": "Search for Nike's current Google ads"
+      },
+      {
+        "name": "Analyze ad images with AI",
+        "description": "Extract visual elements, text content, colors, and marketing insights from ad images",
+        "prompt": "Analyze the visual elements and messaging strategy in this ad image"
+      },
+      {
+        "name": "Analyze ad videos with AI", 
+        "description": "Comprehensive video analysis including scenes, audio, pacing, and marketing strategy",
+        "prompt": "Analyze this video ad's storytelling and marketing effectiveness"
+      },
+      {
+        "name": "Search cached media",
+        "description": "Find previously analyzed ad media by brand, colors, people, or other criteria",
+        "prompt": "Show me all Nike ads with people in them from my cache"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Get ScrapeCreators API Key",
+        "value": "Sign up at [scrapecreators.com](https://scrapecreators.com) to get your API key for accessing Google Ads Transparency Center data.",
+        "type": "text"
+      },
+      {
+        "label": "ScrapeCreators API Key",
+        "type": "input",
+        "placeholder": "Enter your ScrapeCreators API key",
+        "value": "Enter your ScrapeCreators API key",
+        "key": "SCRAPECREATORS_API_KEY"
+      },
+      {
+        "label": "Get Gemini API Key (Optional)",
+        "value": "Get a free API key from [Google AI Studio](https://aistudio.google.com/app/apikey) for video analysis capabilities.",
+        "type": "text"
+      },
+      {
+        "label": "Gemini API Key",
+        "type": "input",
+        "placeholder": "Enter your Gemini API key (optional)",
+        "value": "Enter your Gemini API key for video analysis",
+        "key": "GEMINI_API_KEY"
+      }
+    ]
   }
 ]

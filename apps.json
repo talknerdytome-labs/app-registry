@@ -654,5 +654,66 @@
         "key": "GEMINI_API_KEY"
       }
     ]
+  },
+  {
+    "name": "Google Sheet Analytics",
+    "description": "Analyze Google Sheets data with SQL queries, smart sync, and cross-sheet analysis for conversational data insights.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/sheet-analytics-light.png",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/sheet-analytics-dark.png"
+      }
+    },
+    "category": "Analytics",
+    "price": "Free",
+    "developer": "TalkNerdyToMe Labs",
+    "sourceUrl": "https://github.com/talknerdytome-labs/google-sheet-analytics-mcp",
+    "config": {
+      "mcpKey": "google-sheet-analytics",
+      "runtime": "python",
+      "args": [
+        "mcp_server.py"
+      ]
+    },
+    "features": [
+      {
+        "name": "Smart Sheet Sync",
+        "description": "Sync Google Sheets data with configurable row limits and performance controls",
+        "prompt": "Sync my sales data sheet and analyze the trends"
+      },
+      {
+        "name": "SQL Query Across Sheets",
+        "description": "Run SQL queries across multiple Google Sheets tabs for complex analysis",
+        "prompt": "Query my customer data and sales sheets to find top customers by revenue"
+      },
+      {
+        "name": "Cross-Sheet Analysis",
+        "description": "Get automated suggestions for queries and analysis across your sheets",
+        "prompt": "Analyze my data and suggest insights across all my sheets"
+      },
+      {
+        "name": "Quick Sheet Previews",
+        "description": "Get quick previews of sheet data before running full analysis",
+        "prompt": "Show me a preview of my quarterly reports sheet"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Set up Google Cloud Project",
+        "value": "Create a Google Cloud Project and enable the Google Sheets API following the [setup guide](https://github.com/talknerdytome-labs/google-sheet-analytics-mcp#installation).",
+        "type": "text"
+      },
+      {
+        "label": "Download OAuth2 Credentials",
+        "value": "Download your OAuth2 credentials JSON file from Google Cloud Console and place it in your project directory.",
+        "type": "text"
+      },
+      {
+        "label": "First-time OAuth Setup",
+        "value": "The MCP server will guide you through OAuth authentication on first use to securely connect to your Google Sheets.",
+        "type": "text"
+      }
+    ]
   }
 ]

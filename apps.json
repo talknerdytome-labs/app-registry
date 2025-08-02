@@ -580,5 +580,79 @@
         "key": "GEMINI_API_KEY"
       }
     ]
+  },
+  {
+    "name": "Facebook Ads Library",
+    "description": "Search and analyze Facebook's public ads library with AI-powered video and image analysis, batch processing, and intelligent caching.",
+    "icon": {
+      "type": "url",
+      "url": {
+        "light": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/facebook-ads-light.png",
+        "dark": "https://raw.githubusercontent.com/fleuristes/app-registry/refs/heads/main/assets/facebook-ads-dark.png"
+      }
+    },
+    "category": "Marketing",
+    "price": "Free",
+    "developer": "TalkNerdyToMe Labs",
+    "sourceUrl": "https://github.com/talknerdytome-labs/facebook-ads-library-mcp",
+    "config": {
+      "mcpKey": "facebook-ads-library",
+      "runtime": "python",
+      "args": [
+        "mcp_server.py",
+        "--scrapecreators-api-key",
+        "${SCRAPECREATORS_API_KEY}",
+        "--gemini-api-key",
+        "${GEMINI_API_KEY}"
+      ]
+    },
+    "features": [
+      {
+        "name": "Search Facebook ads by company",
+        "description": "Find platform IDs and retrieve ads for specific companies/brands",
+        "prompt": "Search for Nike's current Facebook ads"
+      },
+      {
+        "name": "Batch analyze multiple brands",
+        "description": "Compare advertising strategies across multiple companies simultaneously",
+        "prompt": "Compare the current advertising strategies across Nike, Adidas, and Under Armour"
+      },
+      {
+        "name": "AI-powered ad analysis",
+        "description": "Analyze video and image ads using AI for visual storytelling and messaging insights",
+        "prompt": "Analyze the video ads from Nike and extract their visual storytelling strategy"
+      },
+      {
+        "name": "Smart caching and optimization",
+        "description": "Intelligent request optimization and credit management for efficient API usage",
+        "prompt": "What messaging is AnthropicAI running right now in their ads?"
+      }
+    ],
+    "setup": [
+      {
+        "label": "Get ScrapeCreators API Key",
+        "value": "Sign up at [scrapecreators.com](https://scrapecreators.com) to get your API key for accessing Facebook Ads Library data.",
+        "type": "text"
+      },
+      {
+        "label": "ScrapeCreators API Key",
+        "type": "input",
+        "placeholder": "Enter your ScrapeCreators API key",
+        "value": "Enter your ScrapeCreators API key",
+        "key": "SCRAPECREATORS_API_KEY"
+      },
+      {
+        "label": "Get Gemini API Key (Optional)",
+        "value": "Get a free API key from [Google AI Studio](https://aistudio.google.com/app/apikey) for video analysis capabilities.",
+        "type": "text"
+      },
+      {
+        "label": "Gemini API Key",
+        "type": "input",
+        "placeholder": "Enter your Gemini API key (optional)",
+        "value": "Enter your Gemini API key for video analysis",
+        "key": "GEMINI_API_KEY"
+      }
+    ]
   }
 ]
